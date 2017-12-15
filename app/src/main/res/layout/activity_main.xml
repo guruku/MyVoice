@@ -81,23 +81,23 @@
             android:layout_height="140dp"
             android:background="@drawable/telkom_dark_close" />
 
-        <ImageView
-            android:id="@+id/telkom_white_open"
-            android:layout_width="340dp"
-            android:layout_height="140dp"
-            android:background="@drawable/telkom_white_open" />
+        <!--<ImageView-->
+            <!--android:id="@+id/telkom_white_open"-->
+            <!--android:layout_width="340dp"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:background="@drawable/telkom_white_open" />-->
 
-        <ImageView
-            android:id="@+id/telkom_white_close"
-            android:layout_width="340dp"
-            android:layout_height="140dp"
-            android:background="@drawable/telkom_white_close" />
+        <!--<ImageView-->
+            <!--android:id="@+id/telkom_white_close"-->
+            <!--android:layout_width="340dp"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:background="@drawable/telkom_white_close" />-->
 
-        <ImageView
-            android:id="@+id/telkom_dark_open"
-            android:layout_width="340dp"
-            android:layout_height="140dp"
-            android:background="@drawable/telkom_dark_open" />
+        <!--<ImageView-->
+            <!--android:id="@+id/telkom_dark_open"-->
+            <!--android:layout_width="340dp"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:background="@drawable/telkom_dark_open" />-->
     </RelativeLayout>
 
     <ImageView

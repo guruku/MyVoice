@@ -1,10 +1,12 @@
 package id.telkomschool.myvoice;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,13 +15,18 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txvResult;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //txvResult = (TextView) findViewById(R.id.txvResult);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MainActivity.this, "Lampu Menyala", Toast.LENGTH_SHORT).show();
+                ImageView telkom_dark_close = (ImageView) findViewById(R.id.telkom_dark_close);
+                telkom_dark_close.setImageResource(R.drawable.telkom_white_open);
+            }
+        },3000);
     }
 
     public void getSpeechInput(View view) {
@@ -31,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(intent, 10);
         } else {
-            Toast.makeText(this, "Your Device Don't Support Speech Input", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Suara kamu tidak jelas!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -43,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
             case 10:
                 if (resultCode == RESULT_OK && data != null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-//                    txvResult.setText(result.get(0));
-                    Toast.makeText(this, result.get(0), Toast.LENGTH_SHORT).show();
+
+                    //untuk menampilkan suara
+                    Toast.makeText(this, result.get(0), Toast.LENGTH_LONG).show();
                 }
                 break;
         }
