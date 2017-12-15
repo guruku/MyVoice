@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/telkom_logo" />
+
+    <RelativeLayout
+        android:id="@+id/tambahan_bird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tambahan_cloud">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/bird" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/bird" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/tambahan_cloud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ts_building">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/cloud" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/cloud" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/cloud" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/cloud" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ts_building"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/telkom_dark_close"
+            android:layout_width="340dp"
+            android:layout_height="140dp"
+            android:background="@drawable/telkom_dark_close" />
+
+        <ImageView
+            android:id="@+id/telkom_white_open"
+            android:layout_width="340dp"
+            android:layout_height="140dp"
+            android:background="@drawable/telkom_white_open" />
+
+        <ImageView
+            android:id="@+id/telkom_white_close"
+            android:layout_width="340dp"
+            android:layout_height="140dp"
+            android:background="@drawable/telkom_white_close" />
+
+        <ImageView
+            android:id="@+id/telkom_dark_open"
+            android:layout_width="340dp"
+            android:layout_height="140dp"
+            android:background="@drawable/telkom_dark_open" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/street"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/ts_building"
+        android:background="@drawable/street" />
+
+
+    <ImageView
+        android:id="@+id/btnSpeak"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:onClick="getSpeechInput"
+        android:src="@drawable/ic_mic2" />
+
+</RelativeLayout>
+
